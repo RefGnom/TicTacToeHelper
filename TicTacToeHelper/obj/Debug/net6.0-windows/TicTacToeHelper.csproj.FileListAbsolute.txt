@@ -15,3 +15,11 @@ D:\Programing\C# Projects\TicTacToeHelper\TicTacToeHelper\obj\Debug\net6.0-windo
 D:\Programing\C# Projects\TicTacToeHelper\TicTacToeHelper\obj\Debug\net6.0-windows\TicTacToeHelper.pdb
 D:\Programing\C# Projects\TicTacToeHelper\TicTacToeHelper\obj\Debug\net6.0-windows\TicTacToeHelper.genruntimeconfig.cache
 D:\Programing\C# Projects\TicTacToeHelper\TicTacToeHelper\obj\Debug\net6.0-windows\ref\TicTacToeHelper.dll
+D:\Programing\C# Projects\TicTacToeHelper\TicTacToeHelper\bin\Debug\net6.0-windows\NUnit3.TestAdapter.dll
+D:\Programing\C# Projects\TicTacToeHelper\TicTacToeHelper\bin\Debug\net6.0-windows\NUnit3.TestAdapter.pdb
+D:\Programing\C# Projects\TicTacToeHelper\TicTacToeHelper\bin\Debug\net6.0-windows\nunit.engine.dll
+D:\Programing\C# Projects\TicTacToeHelper\TicTacToeHelper\bin\Debug\net6.0-windows\nunit.engine.api.dll
+D:\Programing\C# Projects\TicTacToeHelper\TicTacToeHelper\bin\Debug\net6.0-windows\nunit.engine.core.dll
+D:\Programing\C# Projects\TicTacToeHelper\TicTacToeHelper\bin\Debug\net6.0-windows\testcentric.engine.metadata.dll
+D:\Programing\C# Projects\TicTacToeHelper\TicTacToeHelper\bin\Debug\net6.0-windows\nunit.framework.dll
+D:\Programing\C# Projects\TicTacToeHelper\TicTacToeHelper\obj\Debug\net6.0-windows\TicTacToeHelper.csproj.CopyComplete

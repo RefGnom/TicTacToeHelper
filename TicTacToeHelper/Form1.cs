@@ -1,10 +1,8 @@
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
-
 namespace TicTacToeHelper
 {
     public partial class Form1 : Form
     {
+        GameModel gameModel;
         Label choise;
         Label description;
         RadioButton choiseButtonX;
@@ -77,6 +75,7 @@ namespace TicTacToeHelper
             DoubleBuffered = true;
             var font = new Font("Arial", 14);
 
+            gameModel = new GameModel();
             choise = new Label()
             {
                 Text = "Какой фигурой вы играете?",

@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "yZUmtrE9mvu+K8ABlsjHn/eTBCvXIFK+7i4zLhdTjzQPdQmrVnAKGUwoTOz41vNMseQBJJdTEEZFKjly28iI7A==",
+  "dgSpecHash": "lg6m1fcUUKF+Jp03ex2ty46zZbB0WvPGu/2AKMvbBESzpc1lm/jSKeBuyUxiH1bul/WUUE7QVDIJHWTX4gesjA==",
   "success": true,
   "projectFilePath": "D:\\Programing\\C# Projects\\TicTacToeHelper\\TicTacToeHelper\\TicTacToeHelper.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\vepr\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\vepr\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\vepr\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
+    "C:\\Users\\vepr\\.nuget\\packages\\nunit3testadapter\\4.4.2\\nunit3testadapter.4.4.2.nupkg.sha512"
+  ],
   "logs": []
 }
