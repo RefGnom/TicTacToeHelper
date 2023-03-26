@@ -1,4 +1,6 @@
-﻿namespace TicTacToeHelper
+﻿using System.Text;
+
+namespace TicTacToeHelper
 {
     public enum Item
     {
@@ -9,6 +11,7 @@
 
     public class Field
     {
+        int size = 3;
         Item[,] items;
         public Item this[int row, int column]
         {
@@ -18,30 +21,30 @@
 
         public Field()
         {
-            items = new Item[3, 3];
+            items = new Item[size, size];
         }
 
         public Field(string field)
         {
             
-            if (field.Length != 9
+            if (field.Length != size * size
                 || !field.All(x => Enum.IsDefined(typeof(Item), (int)x)))
             {
                 throw new ArgumentException("Incorrect field");
             }
 
-            items = new Item[3, 3];
-            for (int i = 0; i < 9; i++)
+            items = new Item[size, size];
+            for (int i = 0; i < size * size; i++)
             {
-                var row = i / 3;
-                var column = i % 3;
+                var row = i / size;
+                var column = i % size;
                 items[row, column] = (Item)field[i];
             }
         }
 
         public Item GetWinner()
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < size; i++)
             {
                 var threeInRow = true;
                 var threeInColumn = true;
@@ -51,7 +54,7 @@
                 if (itemRow == Item.Empty && itemColumn == Item.Empty)
                     continue;
 
-                for (int j = 1; j < 3; j++)
+                for (int j = 1; j < size; j++)
                 {
                     if (itemRow != items[i, j])
                     {
@@ -72,6 +75,48 @@
                 return items[1, 1];
 
             return Item.Empty;
+        }
+
+        public Field Move(int row, int column, Item item)
+        {
+            if (items[row, column] != Item.Empty)
+                throw new InvalidOperationException("This cell is not empty");
+            var result = new Field();
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    result[i, j] = items[i, j];
+                }
+            }
+            result[row, column] = item;
+            return result;
+        }
+
+        public IEnumerable<Field> GetAllMoves(Item item)
+        {
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    if (items[i, j] == Item.Empty)
+                        yield return Move(i, j, item);
+                }
+            }
+        }
+
+        public override string ToString()
+        {
+            var result = new StringBuilder();
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    result.Append((char)items[i, j]);
+                }
+                result.Append('\n');
+            }
+            return result.ToString();
         }
     }
 }
