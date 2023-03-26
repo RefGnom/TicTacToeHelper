@@ -48,6 +48,8 @@ namespace TicTacToeHelper
             };
             generateVariants.MouseClick += (sender, args) =>
             {
+                // TODO: запустить поиск в ширину для поиска выигрышных вариантов
+                // Выдавать исключение, если выбор символа не сделан
                 choise.Text = "Генерация";
             };
         }
