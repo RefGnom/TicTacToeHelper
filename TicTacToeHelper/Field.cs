@@ -11,7 +11,7 @@ namespace TicTacToeHelper
 
     public class Field
     {
-        int size = 3;
+        int size;
         Item[,] items;
         public Item this[int row, int column]
         {
@@ -19,14 +19,22 @@ namespace TicTacToeHelper
             set => items[row, column] = value;
         }
 
-        public Field()
+        public Field(int size)
         {
+            this.size = size;
             items = new Item[size, size];
+            for (int row = 0; row < size; row++)
+            {
+                for (int column = 0; column < size; column++)
+                {
+                    items[row, column] = Item.Empty;
+                }
+            }
         }
 
-        public Field(string field)
+        public Field(int size, string field)
         {
-            
+            this.size = size;
             if (field.Length != size * size
                 || !field.All(x => Enum.IsDefined(typeof(Item), (int)x)))
             {
@@ -81,7 +89,7 @@ namespace TicTacToeHelper
         {
             if (items[row, column] != Item.Empty)
                 throw new InvalidOperationException("This cell is not empty");
-            var result = new Field();
+            var result = new Field(size);
             for (int i = 0; i < size; i++)
             {
                 for (int j = 0; j < size; j++)
